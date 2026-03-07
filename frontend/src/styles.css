@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 207 60% 98%;
+    --foreground: 210 35% 13%;
+    --card: 0 0% 100%;
+    --card-foreground: 210 35% 13%;
+    --primary: 195 88% 34%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 210 40% 92%;
+    --secondary-foreground: 210 35% 18%;
+    --muted: 210 35% 95%;
+    --muted-foreground: 210 22% 42%;
+    --accent: 45 95% 92%;
+    --accent-foreground: 204 93% 22%;
+    --destructive: 0 72% 47%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 210 30% 85%;
+    --input: 210 30% 85%;
+    --ring: 197 89% 44%;
+    --radius: 0.75rem;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', sans-serif;
+    background-image: radial-gradient(circle at 0% 0%, rgba(14, 165, 233, 0.2), rgba(248, 250, 252, 0) 32%),
+      radial-gradient(circle at 100% 100%, rgba(251, 191, 36, 0.2), rgba(248, 250, 252, 0) 35%);
+  }
+}

@@ -1,0 +1,25 @@
+services:
+  api:
+    build:
+      context: ./api
+    container_name: shape-convert-api
+    environment:
+      PORT: "8080"
+      HOST: "0.0.0.0"
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./api/src:/app/src
+
+  frontend:
+    build:
+      context: ./frontend
+    container_name: shape-convert-frontend
+    environment:
+      VITE_API_URL: "http://localhost:8080"
+    ports:
+      - "5173:5173"
+    depends_on:
+      - api
+    volumes:
+      - ./frontend/src:/app/src
