@@ -3,6 +3,9 @@
 ## Overview
 Shapefile ZIPをアップロードし、GDAL（ogr2ogr）でGeoJSON/CSVへ変換して可視化・ダウンロードするWebアプリです。
 
+## 利用イメージ
+![shape-convert-web usage image](docs/demo/usage-image.png)
+
 ## ローカル動作手順
 
 ### 1. 前提
